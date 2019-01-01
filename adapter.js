@@ -4,7 +4,7 @@ let sprintf = require(`sprintf-js`).sprintf
 
 class Adapter {
     constructor() {
-        this.name = `whaleshares`;
+        this.name = `weku`;
 
         this.connection = require(`@steemit/steem-js`);
         this.reconnect();
@@ -19,7 +19,7 @@ class Adapter {
     }
 
     reconnect() {
-        this.connection.api.setOptions({ url: `wss://whaleshares.io:8190` });
+        this.connection.api.setOptions({ url: `wss://news.weku.io:8190` });
         this.connection.config.set(`address_prefix`, `WKA`);
         this.connection.config.set(`chain_id`, `b24e09256ee14bab6d58bfa3a4e47b0474a73ef4d6c47eeea007848195fa085e`);
     }
